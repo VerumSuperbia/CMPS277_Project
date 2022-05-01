@@ -4,6 +4,7 @@
  */
 package com.mycompany.songs_gui;
 
+import java.sql.Date;
 import java.awt.CardLayout;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -89,6 +90,9 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
         jLabel24 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
         jPanel9 = new javax.swing.JPanel();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
@@ -99,6 +103,12 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
         jButton17 = new javax.swing.JButton();
         jLabel27 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jPasswordField5 = new javax.swing.JPasswordField();
+        jLabel33 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Songs Database");
@@ -610,43 +620,69 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
         jLabel26.setMinimumSize(new java.awt.Dimension(400, 32));
         jLabel26.setPreferredSize(new java.awt.Dimension(400, 32));
 
+        jLabel22.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(0, 153, 153));
+        jLabel22.setText("Date of Birth:");
+        jLabel22.setToolTipText("optional, used for reset");
+
+        jLabel29.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel29.setForeground(new java.awt.Color(0, 153, 153));
+        jLabel29.setMaximumSize(new java.awt.Dimension(400, 32));
+        jLabel29.setMinimumSize(new java.awt.Dimension(400, 32));
+        jLabel29.setPreferredSize(new java.awt.Dimension(400, 32));
+
+        jTextField5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jTextField5.setText("yyyy-mm-dd");
+        jTextField5.setToolTipText("yyyy-mm-dd");
+        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField5ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(477, 477, 477)
-                .addComponent(jLabel15)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jButton16)
+                .addGap(0, 1145, Short.MAX_VALUE))
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButton16))
+                        .addGap(477, 477, 477)
+                        .addComponent(jLabel15))
                     .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGap(462, 462, 462)
+                        .addGap(460, 460, 460)
                         .addComponent(jButton14)))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(47, 47, 47)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel8Layout.createSequentialGroup()
+                            .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel16)
+                                .addComponent(jLabel17))
+                            .addGap(102, 102, 102))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                            .addComponent(jLabel18)
+                            .addGap(18, 18, 18)))
                     .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel16)
-                            .addComponent(jLabel17))
-                        .addGap(102, 102, 102))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                        .addComponent(jLabel18)
-                        .addGap(18, 18, 18)))
+                        .addComponent(jLabel22)
+                        .addGap(75, 75, 75)))
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPasswordField3, javax.swing.GroupLayout.DEFAULT_SIZE, 252, Short.MAX_VALUE)
                     .addComponent(jPasswordField2)
-                    .addComponent(jTextField3))
+                    .addComponent(jTextField3)
+                    .addComponent(jTextField5, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
-                    .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(120, 120, 120))
         );
         jPanel8Layout.setVerticalGroup(
@@ -667,13 +703,20 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
                         .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel18)
-                    .addComponent(jPasswordField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(47, 47, 47)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel18)
+                        .addComponent(jPasswordField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel22)
+                        .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
                 .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
+                .addGap(19, 19, 19)
                 .addComponent(jButton16)
                 .addContainerGap())
         );
@@ -699,9 +742,14 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
 
         jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(0, 153, 153));
-        jLabel21.setText("Password:");
+        jLabel21.setText("New Password:");
 
         jPasswordField4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jPasswordField4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField4ActionPerformed(evt);
+            }
+        });
 
         jButton15.setBackground(new java.awt.Color(102, 255, 102));
         jButton15.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
@@ -735,6 +783,43 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
         jLabel28.setMinimumSize(new java.awt.Dimension(400, 32));
         jLabel28.setPreferredSize(new java.awt.Dimension(400, 32));
 
+        jLabel30.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel30.setForeground(new java.awt.Color(0, 153, 153));
+        jLabel30.setText("Date of Birth:");
+        jLabel30.setToolTipText("optional, used for reset");
+
+        jTextField6.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jTextField6.setText("yyyy-mm-dd");
+        jTextField6.setToolTipText("yyyy-mm-dd");
+        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField6ActionPerformed(evt);
+            }
+        });
+
+        jLabel31.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel31.setForeground(new java.awt.Color(0, 153, 153));
+        jLabel31.setMaximumSize(new java.awt.Dimension(400, 32));
+        jLabel31.setMinimumSize(new java.awt.Dimension(400, 32));
+        jLabel31.setPreferredSize(new java.awt.Dimension(400, 32));
+
+        jLabel32.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel32.setForeground(new java.awt.Color(0, 153, 153));
+        jLabel32.setText("Confirm Password:");
+
+        jPasswordField5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jPasswordField5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField5ActionPerformed(evt);
+            }
+        });
+
+        jLabel33.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel33.setForeground(new java.awt.Color(0, 153, 153));
+        jLabel33.setMaximumSize(new java.awt.Dimension(400, 32));
+        jLabel33.setMinimumSize(new java.awt.Dimension(400, 32));
+        jLabel33.setPreferredSize(new java.awt.Dimension(400, 32));
+
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
@@ -743,46 +828,72 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addGap(525, 525, 525)
-                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel19)
-                            .addComponent(jButton15)))
+                        .addComponent(jLabel19))
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton17)))
+                        .addComponent(jButton17))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGap(515, 515, 515)
+                        .addComponent(jButton15)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                .addGap(0, 129, Short.MAX_VALUE)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(114, 114, 114)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel20)
-                    .addComponent(jLabel21))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                        .addComponent(jLabel32)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPasswordField5, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(jLabel30)
+                        .addGap(75, 75, 75)
+                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(jLabel21)
+                        .addGap(55, 55, 55)
+                        .addComponent(jPasswordField4, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(jLabel20)
+                        .addGap(102, 102, 102)
+                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField4)
-                    .addComponent(jPasswordField4, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(124, 124, 124))
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+                        .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel33, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 114, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addGap(51, 51, 51)
                 .addComponent(jLabel19)
-                .addGap(116, 116, 116)
+                .addGap(82, 82, 82)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel20)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel20)
+                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel21)
-                    .addComponent(jPasswordField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel21)
+                        .addComponent(jPasswordField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel32)
+                    .addComponent(jPasswordField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel30)
+                    .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
                 .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 175, Short.MAX_VALUE)
+                .addGap(60, 60, 60)
                 .addComponent(jButton17)
                 .addContainerGap())
         );
@@ -811,7 +922,35 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
 private static String username;
 private static String password;
 private static String cpassword;
+private static Date dob;
 private static Dictionary logins = new Hashtable();
+private static ResultSet Connect(String q){
+    try {
+            // TODO add your handling code here:
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            try {
+                Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/277project", "root", "Poiulkjhmnbv123@"); 
+                System.out.println("Connection Successful");
+                Statement st = con.createStatement();
+                String query = q;
+                if (query.contains("insert")||query.contains("delete")||query.contains("update")){
+                    //System.out.println("Contains insert");
+                    st.executeUpdate(query);
+                    return null;
+                }
+                else{
+                    ResultSet rs = st.executeQuery(query);
+                    return rs;
+                }               
+            } catch (SQLException ex) {
+                Logger.getLogger(Songs_GUI_Welcome.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Songs_GUI_Welcome.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+
+}
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
         CardLayout card = (CardLayout)mainPanel.getLayout();
@@ -882,19 +1021,23 @@ private static Dictionary logins = new Hashtable();
         // TODO add your handling code here:
         CardLayout card = (CardLayout)mainPanel.getLayout();
         card.show(mainPanel, "card8");
-        username = ""; password = ""; cpassword = ""; jLabel24.setText("");jLabel25.setText("");jLabel26.setText(""); jTextField3.setText(""); 
-        jPasswordField2.setText(""); jPasswordField3.setText("");
+        username = ""; password = ""; cpassword = ""; jLabel24.setText("");jLabel25.setText("");jLabel26.setText(""); jLabel29.setText(""); jTextField3.setText(""); 
+        jPasswordField2.setText(""); jPasswordField3.setText(""); jTextField5.setText("yyyy-mm-dd");
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        // TODO add your handling code here:
-        username = jTextField2.getText();
-        password = String.valueOf(jPasswordField1.getPassword());
-        if(logins.size() > 0){
-            if(logins.get(username).equals(password)){
-            CardLayout card = (CardLayout)mainPanel.getLayout();
-            card.show(mainPanel, "card2");
-        }
+        try {
+            // TODO add your handling code here:
+            username = jTextField2.getText();
+            password = String.valueOf(jPasswordField1.getPassword());
+            String query = "select username, password from logins where username =\"" + username + "\" and password=\"" + password + "\";";
+            ResultSet rs = Connect(query); //String u=""; String p="";
+            if (rs.next()){
+                CardLayout card = (CardLayout)mainPanel.getLayout();
+                card.show(mainPanel, "card2");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Songs_GUI_Welcome.class.getName()).log(Level.SEVERE, null, ex);
         }
         jLabel23.setText("Wrong username or password");
     }//GEN-LAST:event_jButton12ActionPerformed
@@ -904,7 +1047,8 @@ private static Dictionary logins = new Hashtable();
         CardLayout card = (CardLayout)mainPanel.getLayout();
         card.show(mainPanel, "card9");
         username = ""; password = ""; cpassword = ""; 
-        jTextField4.setText(""); jPasswordField4.setText(""); jLabel27.setText(""); jLabel28.setText("");
+        jTextField4.setText(""); jPasswordField4.setText(""); jLabel27.setText(""); jLabel28.setText(""); jLabel31.setText(""); jLabel33.setText("");
+        jPasswordField5.setText(""); jTextField6.setText("yyyy-mm-dd");
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
@@ -913,13 +1057,15 @@ private static Dictionary logins = new Hashtable();
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // TODO add your handling code here:
-        username = ""; password = ""; cpassword = "";
+        username = ""; password = ""; cpassword = ""; dob = null;
         username = jTextField3.getText();
         password = String.valueOf(jPasswordField2.getPassword());
         cpassword = String.valueOf(jPasswordField3.getPassword());
+        String d = jTextField5.getText();
         boolean v1 = false;
         boolean v2 = false;
         boolean v3 = false;
+        boolean v4 = false;
         if (username.length() >= 4 && username.length()<25){
             v1 = true; jLabel24.setText("");
         }
@@ -938,11 +1084,30 @@ private static Dictionary logins = new Hashtable();
         else{
             jLabel26.setText("Different Passwords"); v3 = false;
         }
+       try{
+            dob = Date.valueOf(d); jLabel29.setText(""); v4 = true;
+        } catch(Exception e){
+            jLabel29.setText("Only supports yyyy-mm-dd format"); 
+        }
         if (v1 && v2 && v3){
-           logins.put(username, password);
-            CardLayout card = (CardLayout)mainPanel.getLayout();
-            card.show(mainPanel, "card7"); 
-            jLabel23.setText(""); jTextField2.setText(""); jPasswordField1.setText(""); 
+            String query1 ="select username from logins where username = \"" + username + "\";";
+            String query2 = "insert into logins(username, password, dateofbirth) values (\"" + username + "\", \"" + password + "\");" ;
+            if(v4){
+                query2 = "insert into logins(username, password, dateofbirth) values (\"" + username + "\", \"" + password + "\", \"" + dob + "\");" ;
+            }
+            try {
+                if (Connect(query1).next()){
+                    jLabel24.setText("This username already exists");
+                }
+                else{
+                    Connect(query2);
+                    CardLayout card = (CardLayout)mainPanel.getLayout();
+                    card.show(mainPanel, "card7"); 
+                    jLabel23.setText(""); jTextField2.setText(""); jPasswordField1.setText(""); 
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(Songs_GUI_Welcome.class.getName()).log(Level.SEVERE, null, ex);
+            }    
         }
     }//GEN-LAST:event_jButton14ActionPerformed
 
@@ -954,28 +1119,48 @@ private static Dictionary logins = new Hashtable();
         // TODO add your handling code here:
         username = jTextField4.getText();
         password = String.valueOf(jPasswordField4.getPassword());
+        cpassword = String.valueOf(jPasswordField5.getPassword());
+        String d = jTextField6.getText();
         boolean v1 = false;
         boolean v2 = false;
-        if (logins.get(username)!= null){
-            v1 = true; jLabel27.setText("");
+        boolean v3 = false;
+        boolean v4 = false;
+        try{
+            dob = Date.valueOf(d); jLabel31.setText(""); v3 = true;
+        } catch(Exception e){
+            jLabel31.setText("Only supports yyyy-mm-dd format"); 
         }
-        else{
-            jLabel27.setText("Invalid Username"); v1 = false;
-        }
-        if (password.length() >= 4 && password.length() < 25){
-            v2 = true; jLabel28.setText("");
-        }
-        else{
-            jLabel28.setText("Password should be between 4 and 24 characters"); v2 =false;
-        }
-        if (v1 && v2){
-            logins.remove(username); logins.put(username, password);
-            CardLayout card = (CardLayout)mainPanel.getLayout();
-            card.show(mainPanel, "card7");
-            jLabel23.setText("");
-            username = ""; password = ""; cpassword = "";
-            jTextField2.setText(""); jPasswordField1.setText(""); 
-        }
+        String query1 ="select username from logins where username = \"" + username + "\";";
+        String query2 = "select username from logins where dateofbirth = \"" + dob + "\";";
+        try {
+            if (Connect(query1).next()){v1= true; jLabel27.setText("");}
+            else{
+                jLabel27.setText("Invalid Username"); v1 = false;
+            }
+            if(password.length() >= 4 && password.length() < 25){v2 = true; jLabel28.setText("");}
+            else{
+                jLabel28.setText("Password should be between 4 and 24 characters"); v2 =false;
+            }
+            if (Connect(query2).next()){v3= true; jLabel31.setText("");}
+            else{
+                jLabel31.setText("Incorrect date of birth"); v3 = false;
+            }
+            if (password.equals(cpassword)){v4 = true; jLabel33.setText("");}
+            else{
+                jLabel33.setText("Passwords do not match"); v4 = false;
+            }
+            if (v1 && v2 &&v3 &&v4){
+                String query3 = "update logins set password =\"" + password + "\" where username = \"" + username + "\" and dateofbirth = \"" + dob + "\";";  
+                Connect(query3);
+                CardLayout card = (CardLayout)mainPanel.getLayout();
+                card.show(mainPanel, "card7");
+                jLabel23.setText("");
+                username = ""; password = ""; cpassword = ""; dob = null;
+                jTextField2.setText(""); jPasswordField1.setText(""); jTextField6.setText("yyyy-mm-dd");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Songs_GUI_Welcome.class.getName()).log(Level.SEVERE, null, ex);
+        }        
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
@@ -997,6 +1182,22 @@ private static Dictionary logins = new Hashtable();
         card.show(mainPanel, "card7");
         jLabel23.setText(""); jTextField2.setText(""); jPasswordField1.setText("");
     }//GEN-LAST:event_jButton17ActionPerformed
+
+    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField5ActionPerformed
+
+    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField6ActionPerformed
+
+    private void jPasswordField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField4ActionPerformed
+
+    private void jPasswordField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1065,13 +1266,19 @@ private static Dictionary logins = new Hashtable();
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1091,9 +1298,12 @@ private static Dictionary logins = new Hashtable();
     private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JPasswordField jPasswordField3;
     private javax.swing.JPasswordField jPasswordField4;
+    private javax.swing.JPasswordField jPasswordField5;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
     private javax.swing.JPanel mainPanel;
     // End of variables declaration//GEN-END:variables
 }
