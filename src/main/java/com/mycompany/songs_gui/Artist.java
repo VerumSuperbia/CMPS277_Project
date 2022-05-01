@@ -16,6 +16,7 @@ public class Artist {
     private byte[] picture;
     private String s_url;
     private String s_id;
+    private Date birthdate;
     public Artist(){
         
     }
@@ -51,5 +52,11 @@ public class Artist {
     }
     public void setS_id(String i){
         this.s_id = i;
+    }
+    public Date getBirthdate(){
+        return birthdate;
+    }
+    public void setBirthdate(Date d){
+        this.birthdate = d;
     }
 }
