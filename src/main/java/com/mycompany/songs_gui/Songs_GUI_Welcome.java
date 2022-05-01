@@ -54,12 +54,13 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
+        jButton18 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
         jButton7 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jButton8 = new javax.swing.JButton();
@@ -109,6 +110,9 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
         jLabel32 = new javax.swing.JLabel();
         jPasswordField5 = new javax.swing.JPasswordField();
         jLabel33 = new javax.swing.JLabel();
+        jPanel10 = new javax.swing.JPanel();
+        jLabel34 = new javax.swing.JLabel();
+        jButton19 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Songs Database");
@@ -196,7 +200,7 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(153, 255, 153));
         jButton2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jButton2.setForeground(new java.awt.Color(0, 153, 153));
-        jButton2.setText("Insert Songs");
+        jButton2.setText("Insert Items Manually");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -206,7 +210,7 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
         jButton3.setBackground(new java.awt.Color(153, 255, 153));
         jButton3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jButton3.setForeground(new java.awt.Color(0, 153, 153));
-        jButton3.setText("Update Songs");
+        jButton3.setText("Update Items Manually");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -216,7 +220,7 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
         jButton4.setBackground(new java.awt.Color(153, 255, 153));
         jButton4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jButton4.setForeground(new java.awt.Color(0, 153, 153));
-        jButton4.setText("Display Songs");
+        jButton4.setText("Display Info Related to Songs");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -226,7 +230,7 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
         jButton5.setBackground(new java.awt.Color(153, 255, 153));
         jButton5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jButton5.setForeground(new java.awt.Color(0, 153, 153));
-        jButton5.setText("Delete Songs");
+        jButton5.setText("Insert Using Spotify_API");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -237,6 +241,16 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
         jLabel11.setForeground(new java.awt.Color(0, 153, 153));
         jLabel11.setText("Main Menu:");
 
+        jButton18.setBackground(new java.awt.Color(153, 255, 153));
+        jButton18.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jButton18.setForeground(new java.awt.Color(0, 153, 153));
+        jButton18.setText("Delete Items Manually");
+        jButton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton18ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -244,32 +258,34 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(478, 478, 478)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton4)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(496, 496, 496)
-                        .addComponent(jLabel11)))
-                .addContainerGap(519, Short.MAX_VALUE))
+                        .addComponent(jLabel11))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(368, 368, 368)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 498, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(444, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(jLabel11)
-                .addGap(89, 89, 89)
-                .addComponent(jButton2)
-                .addGap(18, 18, 18)
-                .addComponent(jButton3)
-                .addGap(18, 18, 18)
-                .addComponent(jButton4)
-                .addGap(18, 18, 18)
+                .addGap(90, 90, 90)
                 .addComponent(jButton5)
-                .addContainerGap(198, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton18)
+                .addContainerGap(149, Short.MAX_VALUE))
         );
 
         mainPanel.add(jPanel2, "card2");
@@ -278,7 +294,8 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 153, 153));
-        jLabel7.setText("Insert Songs:");
+        jLabel7.setText("Insert Items Manually:");
+        jLabel7.setToolTipText("");
 
         jButton6.setBackground(new java.awt.Color(153, 255, 153));
         jButton6.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -299,7 +316,7 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel7)
                     .addComponent(jButton6))
-                .addContainerGap(1041, Short.MAX_VALUE))
+                .addContainerGap(955, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -315,10 +332,6 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(204, 255, 204));
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 153, 153));
-        jLabel8.setText("Modify Songs:");
-
         jButton7.setBackground(new java.awt.Color(153, 255, 153));
         jButton7.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jButton7.setForeground(new java.awt.Color(0, 153, 153));
@@ -329,6 +342,10 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
             }
         });
 
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 153, 153));
+        jLabel8.setText("Update Items Manually:");
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -338,7 +355,7 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel8)
                     .addComponent(jButton7))
-                .addContainerGap(1017, Short.MAX_VALUE))
+                .addContainerGap(927, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -356,7 +373,7 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 153, 153));
-        jLabel9.setText("Display Songs:");
+        jLabel9.setText("Display Info:");
 
         jButton8.setBackground(new java.awt.Color(153, 255, 153));
         jButton8.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -377,7 +394,7 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel9)
                     .addComponent(jButton8))
-                .addContainerGap(1015, Short.MAX_VALUE))
+                .addContainerGap(1108, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -395,7 +412,7 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(0, 153, 153));
-        jLabel10.setText("Delete Songs:");
+        jLabel10.setText("Delete Items Manually:");
 
         jButton9.setBackground(new java.awt.Color(153, 255, 153));
         jButton9.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -416,7 +433,7 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel10)
                     .addComponent(jButton9))
-                .addContainerGap(1027, Short.MAX_VALUE))
+                .addContainerGap(941, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -532,7 +549,7 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jButton11)))
-                .addContainerGap(312, Short.MAX_VALUE))
+                .addContainerGap(371, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -657,7 +674,7 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButton16)
-                .addGap(0, 1145, Short.MAX_VALUE))
+                .addGap(0, 1204, Short.MAX_VALUE))
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel8Layout.createSequentialGroup()
@@ -683,7 +700,7 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
                         .addComponent(jLabel22)
                         .addGap(75, 75, 75)))
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPasswordField3, javax.swing.GroupLayout.DEFAULT_SIZE, 252, Short.MAX_VALUE)
+                    .addComponent(jPasswordField3, javax.swing.GroupLayout.DEFAULT_SIZE, 311, Short.MAX_VALUE)
                     .addComponent(jPasswordField2)
                     .addComponent(jTextField3)
                     .addComponent(jTextField5, javax.swing.GroupLayout.Alignment.TRAILING))
@@ -910,6 +927,46 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
 
         mainPanel.add(jPanel9, "card9");
 
+        jPanel10.setBackground(new java.awt.Color(204, 255, 204));
+
+        jLabel34.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel34.setForeground(new java.awt.Color(0, 153, 153));
+        jLabel34.setText("Insert Items Using Spotify's API:");
+        jLabel34.setToolTipText("");
+
+        jButton19.setBackground(new java.awt.Color(153, 255, 153));
+        jButton19.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jButton19.setForeground(new java.awt.Color(0, 153, 153));
+        jButton19.setText("Return");
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton19ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel34)
+                    .addComponent(jButton19))
+                .addContainerGap(802, Short.MAX_VALUE))
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel34)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 522, Short.MAX_VALUE)
+                .addComponent(jButton19)
+                .addContainerGap())
+        );
+
+        mainPanel.add(jPanel10, "card10");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -966,7 +1023,7 @@ private static ResultSet Connect(String q){
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
         CardLayout card = (CardLayout)mainPanel.getLayout();
-        card.show(mainPanel, "card6");
+        card.show(mainPanel, "card10");
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -1211,6 +1268,18 @@ private static ResultSet Connect(String q){
         // TODO add your handling code here:
     }//GEN-LAST:event_jPasswordField5ActionPerformed
 
+    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+        // TODO add your handling code here:
+        CardLayout card = (CardLayout)mainPanel.getLayout();
+        card.show(mainPanel, "card6");
+    }//GEN-LAST:event_jButton18ActionPerformed
+
+    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+        // TODO add your handling code here:
+        CardLayout card = (CardLayout)mainPanel.getLayout();
+        card.show(mainPanel, "card2");
+    }//GEN-LAST:event_jButton19ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1256,6 +1325,8 @@ private static ResultSet Connect(String q){
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -1291,6 +1362,7 @@ private static ResultSet Connect(String q){
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1298,6 +1370,7 @@ private static ResultSet Connect(String q){
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
