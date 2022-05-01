@@ -233,7 +233,7 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
             }
         });
 
-        jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 153, 153));
         jLabel11.setText("Main Menu:");
 
@@ -244,24 +244,24 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(505, 505, 505)
-                        .addComponent(jLabel11))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(478, 478, 478)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton4)
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(496, 496, 496)
+                        .addComponent(jLabel11)))
                 .addContainerGap(519, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(15, 15, 15)
                 .addComponent(jLabel11)
-                .addGap(98, 98, 98)
+                .addGap(89, 89, 89)
                 .addComponent(jButton2)
                 .addGap(18, 18, 18)
                 .addComponent(jButton3)
@@ -940,18 +940,20 @@ private static ResultSet Connect(String q){
             Class.forName("com.mysql.cj.jdbc.Driver");
             try {
                 Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/277project", "root", "Poiulkjhmnbv123@"); 
+                //jdbc:mysql://127.0.0.1:3306/277project Poiulkjhmnbv123@ //HQb&PcxB6qXKmeaD
                 System.out.println("Connection Successful");
                 Statement st = con.createStatement();
                 String query = q;
                 if (query.contains("insert")||query.contains("delete")||query.contains("update")){
                     //System.out.println("Contains insert");
                     st.executeUpdate(query);
+                    con.close();
                     return null;
                 }
                 else{
                     ResultSet rs = st.executeQuery(query);
                     return rs;
-                }               
+                }
             } catch (SQLException ex) {
                 Logger.getLogger(Songs_GUI_Welcome.class.getName()).log(Level.SEVERE, null, ex);
             }
