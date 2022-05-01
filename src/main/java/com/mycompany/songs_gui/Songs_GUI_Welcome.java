@@ -234,6 +234,7 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
         });
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(0, 153, 153));
         jLabel11.setText("Main Menu:");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -241,21 +242,26 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel11)
-                    .addComponent(jButton5)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4))
-                .addContainerGap(991, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(505, 505, 505)
+                        .addComponent(jLabel11))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(478, 478, 478)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton4)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(519, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel11)
-                .addGap(26, 26, 26)
+                .addGap(98, 98, 98)
                 .addComponent(jButton2)
                 .addGap(18, 18, 18)
                 .addComponent(jButton3)
@@ -263,7 +269,7 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
                 .addComponent(jButton4)
                 .addGap(18, 18, 18)
                 .addComponent(jButton5)
-                .addContainerGap(270, Short.MAX_VALUE))
+                .addContainerGap(198, Short.MAX_VALUE))
         );
 
         mainPanel.add(jPanel2, "card2");
@@ -271,6 +277,7 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(204, 255, 204));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 153, 153));
         jLabel7.setText("Insert Songs:");
 
         jButton6.setBackground(new java.awt.Color(153, 255, 153));
@@ -309,6 +316,7 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(204, 255, 204));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 153, 153));
         jLabel8.setText("Modify Songs:");
 
         jButton7.setBackground(new java.awt.Color(153, 255, 153));
@@ -347,6 +355,7 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
         jPanel5.setBackground(new java.awt.Color(204, 255, 204));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 153, 153));
         jLabel9.setText("Display Songs:");
 
         jButton8.setBackground(new java.awt.Color(153, 255, 153));
@@ -385,6 +394,7 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
         jPanel6.setBackground(new java.awt.Color(204, 255, 204));
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 153, 153));
         jLabel10.setText("Delete Songs:");
 
         jButton9.setBackground(new java.awt.Color(153, 255, 153));
