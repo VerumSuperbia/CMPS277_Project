@@ -2,7 +2,6 @@ CREATE TABLE Track(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(50),
     duration_ms INT,
-    isrc char(12) UNIQUE,
     spotify_url varchar(150) UNIQUE,
     spotify_id char(22) UNIQUE,
     explicit TINYINT,
@@ -15,7 +14,7 @@ CREATE TABLE Album(
     title VARCHAR(50),
     release_date DATE,
     -- note to self
-    picture LONGBLOB,
+    picture varchar(150),
     spotify_url varchar(150) UNIQUE,
     spotify_id char(22) UNIQUE,
     label_record_id INT NOT NULL
@@ -24,7 +23,7 @@ CREATE TABLE Album(
 CREATE TABLE Artist(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, 
     name varchar(50),
-    picture LONGBLOB, 
+    picture varchar(150), 
     spotify_url varchar(150) UNIQUE, 
     spotify_id char(22) UNIQUE
 );
