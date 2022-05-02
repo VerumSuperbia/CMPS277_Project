@@ -20,8 +20,8 @@ public class Artist {
     public Artist(){
         
     }
-    public Artist(int i, String n, byte[] p, String su, String si){
-        this.id = i; this.name = n; this.picture = p; this.s_url = su; this.s_id = si;
+    public Artist(String n, byte[] p, String su, String si){
+        this.name = n; this.picture = p; this.s_url = su; this.s_id = si;
     }
     public int getId(){
         return id;

@@ -14,8 +14,8 @@ public class Label {
     public Label(){
     
     }
-    public Label(int i, String n){
-        this.id = i; this.name = n;
+    public Label(String n){
+        this.name = n;
     }
     public int getId(){
         return id;

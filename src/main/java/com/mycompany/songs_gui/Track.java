@@ -13,7 +13,6 @@ import java.sql.Date;
 public class Track {
     private int id;
     private String title;
-    private Date release;
     private int duration;
     private String isrc;
     private String s_url;
@@ -24,8 +23,8 @@ public class Track {
     public Track(){
         
     }
-    public Track(int i, String t, Date r, int d, String is, String su, String si, int e, String p, int a){
-        this.id = i; this.title = t; this.release = r; this.duration = d; this.isrc = is; this.s_url = su; this.s_id = si; this.explicit = e; this.p_url = p; this.a_id = a;
+    public Track(String t,int d, String is, String su, String si, int e, String p, int a){
+        this.title = t; this.duration = d; this.isrc = is; this.s_url = su; this.s_id = si; this.explicit = e; this.p_url = p; this.a_id = a;
     }
     public int getId(){
         return id;
@@ -38,12 +37,6 @@ public class Track {
     }
     public void setTitle(String t){
         this.title = t;
-    }
-    public Date getRelease(){
-        return release;
-    }
-    public void setRelease(Date d){
-        this.release = d;
     }
     public int getDuration(){
         return duration;

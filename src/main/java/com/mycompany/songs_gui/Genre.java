@@ -14,8 +14,8 @@ public class Genre {
     public Genre(){
     
     }
-    public Genre(int i, String n){
-        this.id = i; this.name = n;
+    public Genre(String n){
+        this.name = n;
     }
     public int getId(){
         return id;

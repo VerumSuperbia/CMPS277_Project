@@ -14,8 +14,8 @@ public class Instrument {
     public Instrument(){
     
     }
-    public Instrument(int i, String n){
-        this.id = i; this.name = n;
+    public Instrument(String n){
+        this.name = n;
     }
     public int getId(){
         return id;

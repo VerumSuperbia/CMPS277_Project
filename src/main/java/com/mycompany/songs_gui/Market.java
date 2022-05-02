@@ -14,8 +14,8 @@ public class Market {
     public Market(){
     
     }
-    public Market(int i, String n){
-        this.id = i; this.name = n;
+    public Market(String n){
+        this.name = n;
     }
     public int getId(){
         return id;

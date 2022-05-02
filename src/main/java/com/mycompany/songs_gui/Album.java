@@ -20,8 +20,8 @@ public class Album {
     public Album(){
         
     }
-    public Album(int i, String t, Date r, byte[] p, String su, String si, int l){
-        this.id = i; this.title = t; this.release = r; this.picture = p; this.s_url = su; this.s_id = si; this.l_id = l;
+    public Album(String t, Date r, byte[] p, String su, String si, int l){
+        this.title = t; this.release = r; this.picture = p; this.s_url = su; this.s_id = si; this.l_id = l;
     }
     public int getId(){
         return id;
