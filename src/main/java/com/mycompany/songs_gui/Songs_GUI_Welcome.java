@@ -2043,7 +2043,6 @@ private static ResultSet Connect(String q){
             Class.forName("com.mysql.cj.jdbc.Driver");
             try {
                 Connection con = DriverManager.getConnection("jdbc:mysql://xfk1drlwg787u8uj:mgijdet3ihbvamog@ik1eybdutgxsm0lo.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/vc0ejn3r8l1catng", "xfk1drlwg787u8uj", "mgijdet3ihbvamog"); 
-                //jdbc:mysql://127.0.0.1:3306/277project Poiulkjhmnbv123@
                 System.out.println("Connection Successful");
                 Statement st = con.createStatement();
                 String query = q;
