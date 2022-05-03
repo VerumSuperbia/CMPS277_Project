@@ -57,7 +57,6 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         jButton18 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
@@ -153,6 +152,12 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jButton8 = new javax.swing.JButton();
+        jLabel79 = new javax.swing.JLabel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jList4 = new javax.swing.JList<>();
+        jButton31 = new javax.swing.JButton();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
         jPanel6 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jButton9 = new javax.swing.JButton();
@@ -341,16 +346,6 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
             }
         });
 
-        jButton5.setBackground(new java.awt.Color(153, 255, 153));
-        jButton5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(0, 153, 153));
-        jButton5.setText("Insert Using Spotify_API");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 153, 153));
         jLabel11.setText("Main Menu:");
@@ -380,7 +375,6 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
                             .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 498, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(444, Short.MAX_VALUE))
         );
@@ -389,9 +383,7 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(jLabel11)
-                .addGap(90, 90, 90)
-                .addComponent(jButton5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(156, 156, 156)
                 .addComponent(jButton2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton3)
@@ -666,9 +658,8 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel44)
-                        .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel44))
                 .addContainerGap(42, Short.MAX_VALUE))
         );
 
@@ -984,10 +975,11 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
                                 .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel53)
-                            .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel69, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel69, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel53)
+                                .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addComponent(jLabel70, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(60, Short.MAX_VALUE))
         );
@@ -1507,6 +1499,47 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
             }
         });
 
+        jLabel79.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel79.setForeground(new java.awt.Color(0, 153, 153));
+        jLabel79.setText("Choose the query:");
+
+        jList4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jList4.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Get all tracks", "Get all the tracks of an artist", "Get all the tracks of an album", "Get all the tracks of a genre", "Get all the tracks of a label record", "Get all the tracks of a market", "Get all albums", "Get all the albums of an artist", "Get all the albums of a label record", "Get all the albums of a genre", "Get all the albums of a market", "Get all the artists", "Get all the artists of an album", "Get all the artists of a genre", "Get artist by name", "Get artist by id", "Get artist of a song", "Get artist of an album", "Get all the artists of a label record", "Get all the artists of a market", "Get all the markets of an artist", "Get all genres", "Get all the genres of an album", "Get all the genres of a track", "Get all the genres of an artist", "Get all musical groups", "Select the members of a specific group", "Get all the musical groups of an artist", "Get all the musical groups of a label record", "Solo-performer", "Instruments", "Instruments performed by an artist", "Instruments performed by a musical group", "Instruments performed by a label record", "Get all the markets", "Get all artists of a market" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jList4.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        jList4.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+                jList4ValueChanged(evt);
+            }
+        });
+        jScrollPane5.setViewportView(jList4);
+
+        jButton31.setBackground(new java.awt.Color(102, 255, 102));
+        jButton31.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jButton31.setForeground(new java.awt.Color(0, 153, 153));
+        jButton31.setText("Show The Query");
+        jButton31.setToolTipText("");
+        jButton31.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton31ActionPerformed(evt);
+            }
+        });
+
+        jTable2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        jTable2.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
+        jScrollPane6.setViewportView(jTable2);
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -1514,16 +1547,33 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel9)
-                    .addComponent(jButton8))
-                .addContainerGap(1108, Short.MAX_VALUE))
+                    .addComponent(jButton8)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel79)
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(jLabel9)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 530, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(50, 50, 50)
+                        .addComponent(jButton31, javax.swing.GroupLayout.DEFAULT_SIZE, 510, Short.MAX_VALUE))
+                    .addComponent(jScrollPane6))
+                .addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 528, Short.MAX_VALUE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(jLabel9)
+                        .addGap(14, 14, 14)
+                        .addComponent(jLabel79))
+                    .addComponent(jButton31, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 446, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(jButton8)
                 .addContainerGap())
         );
@@ -2232,6 +2282,7 @@ private static String cpassword;
 private static Date dob;
 private static String item;
 private static String delT;
+private static String disT;
 private static ResultSet Connect(String q){
     try {
             // TODO add your handling code here:
@@ -2260,12 +2311,6 @@ private static ResultSet Connect(String q){
         return null;
 
 }
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-        CardLayout card = (CardLayout)mainPanel.getLayout();
-        card.show(mainPanel, "card10");
-    }//GEN-LAST:event_jButton5ActionPerformed
-
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         CardLayout card = (CardLayout)mainPanel.getLayout();
@@ -2314,12 +2359,16 @@ private static ResultSet Connect(String q){
         // TODO add your handling code here:
         CardLayout card = (CardLayout)mainPanel.getLayout();
         card.show(mainPanel, "card2");
+        DefaultTableModel model = (DefaultTableModel) jTable2.getModel();
+            model.setRowCount(0);
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
         CardLayout card = (CardLayout)mainPanel.getLayout();
         card.show(mainPanel, "card2");
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        model.setRowCount(0);
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
@@ -3103,7 +3152,15 @@ private static ResultSet Connect(String q){
                         colName[i] = rsmd.getColumnName(i + 1);
                     }
                     model.setColumnIdentifiers(colName);
-                    int d = 0;
+                    int c =colName.length;
+                    while (rs1.next()){
+                        String[] row = new String[c];
+                        for (int i = 1; i <= c; i++){
+                            row[i - 1] = rs1.getString(i);
+                        }
+                        model.addRow(row);
+                    }
+                    /*int d = 0;
                     if(delT.equals("Track")){ //Album Artist Genre Instrument Label_Record Markets Musical_Group
                         d = 8;
                         while (rs1.next()){
@@ -3131,7 +3188,7 @@ private static ResultSet Connect(String q){
                             String[] row = {Integer.toString(rs1.getInt(1)), rs1.getString(2)};
                             model.addRow(row);
                         }
-                    }
+                    }*/
                 } catch (SQLException ex) {
                     Logger.getLogger(Songs_GUI_Welcome.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -3141,6 +3198,291 @@ private static ResultSet Connect(String q){
     private void jList3ValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jList3ValueChanged
         // TODO add your handling code here:
     }//GEN-LAST:event_jList3ValueChanged
+
+    private void jList4ValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jList4ValueChanged
+        // TODO add your handling code here:
+        item = jList4.getSelectedValue();
+        disT = item;
+    }//GEN-LAST:event_jList4ValueChanged
+
+    private void jButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31ActionPerformed
+        // TODO add your handling code here:
+        DefaultTableModel model = (DefaultTableModel) jTable2.getModel();
+        model.setRowCount(0);
+        String query = "";
+        if(disT.equals("Get all tracks")){
+            query = "SELECT * FROM Track;";
+        }else if(disT.equals("Get all the tracks of an artist")){
+            query = "SELECT * FROM Track JOIN artist_tracks ON Track.id = artist_tracks.tracks_id JOIN Artist ON Artist.id = artist_tracks.atrist_id WHERE Artist.id = \"\" OR Artist.name = \"\" ; ";
+        }
+        else if(disT.equals("Get all the tracks of an album")){
+            query = "SELECT * FROM Track JOIN Album ON Track.album_id = Album.id WHERE Album.title = \"\";";
+        }
+        else if(disT.equals("Get all the tracks of a genre")){
+            query = "SELECT \n" +
+"    * \n" +
+"FROM \n" +
+"    Track JOIN genre_track ON Track.id = genre_track.track_id\n" +
+"          JOIN genre       ON genre.id = genre_track.genre_id\n" +
+"WHERE\n" +
+"    Genre.name = \"\";";
+        }
+        else if(disT.equals("Get all the tracks of a label record")){
+            query = "SELECT \n" +
+"    *\n" +
+"FROM \n" +
+"    Track JOIN Album ON Track.album_id = Album.id\n" +
+"WHERE \n" +
+"    label_record_id = \"\";";
+        }
+        else if(disT.equals("Get all the tracks of a market")){
+            query = "SELECT \n" +
+"    *\n" +
+"FROM\n" +
+"    Track JOIN markets_tracks ON Track.id = markets_tracks.track_id\n" +
+"          JOIN Markets        ON Markets.id = markets_tracks.markets_id\n" +
+"WHERE\n" +
+"    Markets.code_name = \"\";";
+        }
+        else if(disT.equals("Get all albums")){
+            query = "SELECT * FROM Album;";
+        }
+        else if(disT.equals("Get all the albums of an artist")){
+            query = "SELECT \n" +
+"    *\n" +
+"FROM \n" +
+"    Album JOIN artist_album ON Album.id = artist_album.album_id\n" +
+"          Join Artist       ON Artist.id = artist_album.atrist_id;";
+        }
+        else if(disT.equals("Get all the albums of a label record")){
+            query = "SELECT \n" +
+"    *\n" +
+"FROM \n" +
+"    Album JOIN label_record ON label_record.id = Album.label_record_id  \n" +
+"WHERE \n" +
+"    label_record.name = \"\";";
+        }
+        else if(disT.equals("Get all the albums of a genre")){
+            query = "SELECT \n" +
+"    *\n" +
+"FROM\n" +
+"    Album JOIN genre_track ON Album.id = genre_track.album_id\n" +
+"          JOIN genre       ON genre.id = genre_track.genre_id\n" +
+"WHERE\n" +
+"    genre.name = \"\";";
+        }else if(disT.equals("Get all the albums of a market")){
+            query = "SELECT \n" +
+"    *\n" +
+"FROM\n" +
+"    Album JOIN markets_album ON Album.id = markets_album.album_id\n" +
+"          JOIN Markets       ON Markets.id = markets_album.markets_id\n" +
+"WHERE\n" +
+"    Markets.code_name = \"\";";
+        }
+        else if(disT.equals("Get all the artists")){
+            query = "SELECT * FROM Artist;";
+        }
+        else if(disT.equals("Get all the artists of an album")){
+            query = "SELECT\n" +
+"    Artist.name \n" +
+"FROM\n" +
+"    Album JOIN artist_album ON Album.id = artist_album.album_id\n" +
+"          Join Artist       ON Artist.id = artist_album.atrist_id;";
+        }
+        else if(disT.equals("Get all the artists of a genre")){
+            query = "SELECT\n" +
+"    Artist.name\n" +
+"FROM\n" +
+"    Track JOIN genre_track ON Track.id = genre_track.track_id\n" +
+"          JOIN genre       ON genre.id = genre_track.genre_id\n" +
+"          JOIN artist_tracks ON artist_tracks.tracks_id = Track.id\n" +
+"          JOIN Artist       ON Artist.id = artist_tracks.atrist_id;";
+        }
+        else if(disT.equals("Get artist by name")){
+            query = "SELECT * FROM Artist WHERE name = \"\";";
+        }
+        else if(disT.equals("Get artist by id")){
+            query = "SELECT * FROM Artist WHERE id = \"\";";
+        }
+        else if(disT.equals("Get artist of a song")){
+            query = "SELECT\n" +
+"    Artist.name\n" +
+"FROM\n" +
+"    Track JOIN artist_tracks ON Track.id = artist_tracks.tracks_id\n" +
+"          JOIN Artist        ON Artist.id = artist_tracks.atrist_id\n" +
+"WHERE\n" +
+"    Track.title = \"\";";
+        }
+        else if(disT.equals("Get artist of an album")){
+            query = "SELECT\n" +
+"    Artist.name\n" +
+"FROM\n" +
+"    Album JOIN artist_album ON Album.id = artist_album.album_id\n" +
+"          JOIN Artist        ON Artist.id = artist_album.atrist_id\n" +
+"WHERE\n" +
+"    Album.title = \"\";";
+        }
+        else if(disT.equals("Get all the artists of a label record")){
+            query = "SELECT\n" +
+"    Artist.name\n" +
+"FROM\n" +
+"    Track JOIN Album ON Track.album_id = Album.id\n" +
+"          JOIN label_record ON label_record.id = Album.label_record_id  \n" +
+"          JOIN artist_tracks ON artist_tracks.tracks_id = Track.id\n" +
+"          JOIN Artist       ON Artist.id = artist_tracks.atrist_id;";
+        }
+        else if(disT.equals("Get all the artists of a market")){
+            query = "SELECT\n" +
+"    Artist.name\n" +
+"FROM\n" +
+"    Track JOIN markets_tracks ON Track.id = markets_tracks.track_id\n" +
+"          JOIN Markets       ON Markets.id = markets_tracks.markets_id\n" +
+"          JOIN artist_tracks ON artist_tracks.tracks_id = Track.id\n" +
+"          JOIN Artist       ON Artist.id = artist_tracks.atrist_id;";
+        }
+        else if(disT.equals("Get all the markets of an artist")){
+            query = "SELECT\n" +
+"    Markets.code_name\n" +
+"FROM\n" +
+"    Track JOIN artist_tracks ON Track.id = artist_tracks.tracks_id\n" +
+"          JOIN Artist        ON Artist.id = artist_tracks.atrist_id\n" +
+"          JOIN markets_tracks ON markets_tracks.track_id = Track.id\n" +
+"          JOIN Markets       ON Markets.id = markets_tracks.markets_id;";
+        }
+        else if(disT.equals("Get all genres")){
+            query = "SELECT * FROM Genre;";
+        }
+        else if(disT.equals("Get all the genres of an album")){
+            query = "SELECT\n" +
+"    Genre.name\n" +
+"FROM\n" +
+"    Album JOIN genre_track ON Album.id = genre_track.album_id\n" +
+"          JOIN genre       ON genre.id = genre_track.genre_id;";
+        }
+        else if(disT.equals("Get all the genres of a track")){
+            query = "SELECT\n" +
+"    Genre.name\n" +
+"FROM\n" +
+"    Track JOIN genre_track ON Track.id = genre_track.track_id\n" +
+"          JOIN genre       ON genre.id = genre_track.genre_id;";
+        }
+        else if(disT.equals("Get all the genres of an artist")){
+            query = "SELECT\n" +
+"    Genre.name\n" +
+"FROM\n" +
+"    Track JOIN artist_tracks ON Track.id = artist_tracks.tracks_id\n" +
+"          JOIN Artist        ON Artist.id = artist_tracks.atrist_id\n" +
+"          JOIN genre_track   ON genre_track.track_id = Track.id\n" +
+"          JOIN genre        ON genre.id = genre_track.genre_id;";
+        }
+        else if(disT.equals("Get all musical groups")){
+            query = "SELECT * FROM Musical_group;";
+        }
+        else if(disT.equals("Select the members of a specific group")){
+            query = "SELECT \n" +
+"    * \n" +
+"FROM\n" +
+"    Artist as A JOIN Musical_group as MG ON A.id = MG.G_id\n" +
+"                JOIN Group_member as GM  ON MG.G_id = GM.G_id\n" +
+"WHERE\n" +
+"    A.name = \"\";";
+        }
+        else if(disT.equals("Get all the musical groups of an artist")){
+            query = "SELECT\n" +
+"    *\n" +
+"FROM\n" +
+"    Artist as A JOIN Musical_group as MG ON A.id = MG.G_id\n" +
+"                JOIN Group_member as GM  ON MG.G_id = GM.G_id\n" +
+"WHERE\n" +
+"    A.name = \"\";";
+        }
+        else if(disT.equals("Get all the musical groups of a label record")){
+            query = "SELECT\n" +
+"    *\n" +
+"FROM\n" +
+"    Artist as A JOIN Musical_group as MG ON A.id = MG.G_id\n" +
+"                JOIN Group_member as GM  ON MG.G_id = GM.G_id\n" +
+"WHERE\n" +
+"    A.name = \"\";";
+        }
+        else if(disT.equals("Solo-performer")){
+            query = "SELECT \n" +
+"    *\n" +
+"FROM\n" +
+"    Artist as A JOIN Solo_perform as SP ON A.id = SP.A_id\n" +
+"WHERE  A.name = \"\";";
+        }
+        else if(disT.equals("Instruments")){
+            query = "SELECT * FROM Instruments;";
+        }
+        else if(disT.equals("Instruments performed by an artist")){
+            query = "SELECT\n" +
+"    *\n" +
+"FROM\n" +
+"    Artist as A JOIN Solo_perform as SP ON A.id = SP.A_id\n" +
+"                JOIN Performing as IP ON IP.S_id = SP.S_id\n" +
+"                JOIN Instruments as I ON I.id = IP.I_id\n" +
+"WHERE\n" +
+"    A.name = \"\";";
+        }
+        else if(disT.equals("Instruments performed by a musical group")){
+            query = "SELECT\n" +
+"    *\n" +
+"FROM\n" +
+"    Artist as A JOIN Musical_group as MG ON A.id = MG.G_id\n" +
+"                JOIN Group_member as GM  ON MG.G_id = GM.G_id\n" +
+"                JOIN Solo_perform as SP ON SP.A_id = A.id\n" +
+"                JOIN Performing as IP ON IP.S_id = SP.S_id\n" +
+"                JOIN Instruments as I ON I.id = IP.I_id\n" +
+"WHERE\n" +
+"    A.name = \"\";";
+        }
+        else if(disT.equals("Instruments performed by a label record")){
+            query = "SELECT\n" +
+"    *\n" +
+"FROM\n" +
+"    Artist as A JOIN Album as A ON A.id = A.id\n" +
+"                JOIN label_record as LR ON LR.id = A.label_record_id\n" +
+"                JOIN Solo_perform as SP ON SP.A_id = A.id\n" +
+"                JOIN Performing as IP ON IP.S_id = SP.S_id\n" +
+"                JOIN Instruments as I ON I.id = IP.I_id\n" +
+"WHERE\n" +
+"    A.name = \"\";";
+        }
+        else if(disT.equals("Get all the markets")){
+            query = "SELECT * FROM Markets;";
+        }
+        else if(disT.equals("Get all artist of a market")){
+            query = "SELECT\n" +
+"    Artist.name\n" +
+"FROM\n" +
+"    Track JOIN markets_tracks ON Track.id = markets_tracks.track_id\n" +
+"          JOIN Markets       ON Markets.id = markets_tracks.markets_id\n" +
+"          JOIN artist_tracks ON artist_tracks.tracks_id = Track.id\n" +
+"          JOIN Artist       ON Artist.id = artist_tracks.atrist_id;";
+        }
+        try {
+                    ResultSet rs1 = Connect(query);
+                    ResultSetMetaData rsmd = rs1.getMetaData();
+                    int cols = rsmd.getColumnCount();
+                    String[] colName = new String[cols];
+                    for(int i = 0; i<cols; i++){
+                        colName[i] = rsmd.getColumnName(i + 1);
+                    }
+                    model.setColumnIdentifiers(colName);
+                    int c =colName.length;
+                    while (rs1.next()){
+                        String[] row = new String[c];
+                        for (int i = 1; i <= c; i++){
+                            row[i - 1] = rs1.getString(i);
+                        }
+                        model.addRow(row);
+                    }
+                } catch (SQLException ex) {
+                    Logger.getLogger(Songs_GUI_Welcome.class.getName()).log(Level.SEVERE, null, ex);
+                }
+        
+    }//GEN-LAST:event_jButton31ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -3202,8 +3544,8 @@ private static ResultSet Connect(String q){
     private javax.swing.JButton jButton29;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton30;
+    private javax.swing.JButton jButton31;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
@@ -3284,11 +3626,13 @@ private static ResultSet Connect(String q){
     private javax.swing.JLabel jLabel76;
     private javax.swing.JLabel jLabel77;
     private javax.swing.JLabel jLabel78;
+    private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JList<String> jList1;
     private javax.swing.JList<String> jList2;
     private javax.swing.JList<String> jList3;
+    private javax.swing.JList<String> jList4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -3317,7 +3661,10 @@ private static ResultSet Connect(String q){
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField12;
