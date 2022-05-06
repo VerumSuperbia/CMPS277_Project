@@ -2,11 +2,11 @@
 -- Get all tracks
 SELECT * FROM Track;
 
--- Get all the tracks of an artist (has error)
+-- Get all the tracks of an artist
 SELECT 
     * 
 FROM 
-    Track JOIN artist_tracks ON Track.id = artist_tracks.tracks_id
+    Track JOIN artist_tracks ON Track.id = artist_tracks.track_id
           JOIN Artist        ON Artist.id = artist_tracks.atrist_id
 WHERE 
     Artist.id = "" OR Artist.name = "" ; 
@@ -82,7 +82,7 @@ FROM
 WHERE 
     label_record.name = "";
 
--- Get all the albums of a genre (has error)
+-- Get all the albums of a genre (has error) (album_id doesn't exist in genre_track table)
 SELECT 
     *
 FROM
@@ -91,7 +91,7 @@ FROM
 WHERE
     genre.name = "";
 
--- Get all the albums of a market (has error)
+-- Get all the albums of a market 
 SELECT 
     *
 FROM
@@ -120,13 +120,13 @@ FROM
           Join Artist       ON Artist.id = artist_album.atrist_id;
 
 
--- Get all the artist of a genre (has error)
+-- Get all the artist of a genre
 SELECT
     Artist.name
 FROM
     Track JOIN genre_track ON Track.id = genre_track.track_id
           JOIN genre       ON genre.id = genre_track.genre_id
-          JOIN artist_tracks ON artist_tracks.tracks_id = Track.id
+          JOIN artist_tracks ON artist_tracks.track_id = Track.id
           JOIN Artist       ON Artist.id = artist_tracks.atrist_id;
 
 -- Get artist by name 
@@ -135,11 +135,11 @@ SELECT * FROM Artist WHERE name = "";
 -- Get artist by id
 SELECT * FROM Artist WHERE id = "";
 
--- Get artist of a song (has error)
+-- Get artist of a song
 SELECT
     Artist.name
 FROM
-    Track JOIN artist_tracks ON Track.id = artist_tracks.tracks_id
+    Track JOIN artist_tracks ON Track.id = artist_tracks.track_id
           JOIN Artist        ON Artist.id = artist_tracks.atrist_id
 WHERE
     Track.title = "";
@@ -154,30 +154,30 @@ WHERE
     Album.title = "";
 
 
--- Get all the artist of a label record (has error)
+-- Get all the artist of a label record
 SELECT
     Artist.name
 FROM
     Track JOIN Album ON Track.album_id = Album.id
           JOIN label_record ON label_record.id = Album.label_record_id  
-          JOIN artist_tracks ON artist_tracks.tracks_id = Track.id
+          JOIN artist_tracks ON artist_tracks.track_id = Track.id
           JOIN Artist       ON Artist.id = artist_tracks.atrist_id;
 
 
--- Get all the artist of a markets (has error)
+-- Get all the artist of a market
 SELECT
     Artist.name
 FROM
     Track JOIN markets_tracks ON Track.id = markets_tracks.track_id
           JOIN Markets       ON Markets.id = markets_tracks.markets_id
-          JOIN artist_tracks ON artist_tracks.tracks_id = Track.id
+          JOIN artist_tracks ON artist_tracks.track_id = Track.id
           JOIN Artist       ON Artist.id = artist_tracks.atrist_id;
 
-        --   Get all the markets of an artist (has error)
+        --   Get all the markets of an artist
 SELECT
     Markets.code_name
 FROM
-    Track JOIN artist_tracks ON Track.id = artist_tracks.tracks_id
+    Track JOIN artist_tracks ON Track.id = artist_tracks.track_id
           JOIN Artist        ON Artist.id = artist_tracks.atrist_id
           JOIN markets_tracks ON markets_tracks.track_id = Track.id
           JOIN Markets       ON Markets.id = markets_tracks.markets_id;
@@ -191,7 +191,7 @@ FROM
 -- Get all genres
 SELECT * FROM Genre;
 
--- Get all the genres of an album (has error)
+-- Get all the genres of an album (has error) (album_id doesn't exist in genre_track table)
 SELECT
     Genre.name
 FROM
@@ -207,11 +207,11 @@ FROM
           JOIN genre       ON genre.id = genre_track.genre_id;
 
         
--- Get all the genres of an artist (has error)
+-- Get all the genres of an artist
 SELECT
     Genre.name
 FROM
-    Track JOIN artist_tracks ON Track.id = artist_tracks.tracks_id
+    Track JOIN artist_tracks ON Track.id = artist_tracks.track_id
           JOIN Artist        ON Artist.id = artist_tracks.atrist_id
           JOIN genre_track   ON genre_track.track_id = Track.id
           JOIN genre        ON genre.id = genre_track.genre_id;
@@ -221,67 +221,67 @@ FROM
 -- Musical groups
 -- Get all musical groups
 SELECT * FROM Musical_group;
--- Select the members of a specfic group (has error)
+-- Select the members of a specific group
 SELECT 
     * 
 FROM
-    Artist as A JOIN Musical_group as MG ON A.id = MG.G_id
-                JOIN Group_member as GM  ON MG.G_id = GM.G_id
+    Artist as A JOIN Musical_group as MG ON A.id = MG.id
+                JOIN Group_member as GM  ON MG.id = GM.group_id
 WHERE
     A.name = "";
 
 
--- Get all the musical groups of an artist (has error)
+-- Get all the musical groups of an artist
 SELECT
     *
 FROM
-    Artist as A JOIN Musical_group as MG ON A.id = MG.G_id
-                JOIN Group_member as GM  ON MG.G_id = GM.G_id
+    Artist as A JOIN Musical_group as MG ON A.id = MG.id
+                JOIN Group_member as GM  ON MG.id = GM.group_id
 WHERE
     A.name = "";
 
 
--- Get all the musical groups of a label record (has error)
+-- Get all the musical groups of a label record
 SELECT
     *
 FROM
-    Artist as A JOIN Musical_group as MG ON A.id = MG.G_id
-                JOIN Group_member as GM  ON MG.G_id = GM.G_id
+    Artist as A JOIN Musical_group as MG ON A.id = MG.id
+                JOIN Group_member as GM  ON MG.id = GM.group_id
 WHERE
     A.name = "";
 
 
 
--- Solo-performer (has error)
+-- Solo-performer
 SELECT 
     *
 FROM
-    Artist as A JOIN Solo_perform as SP ON A.id = SP.A_id
+    Artist as A JOIN Solo_perform as SP ON A.id = SP.atrist_id
 WHERE  A.name = "";
 
 -- Instruments
     SELECT * FROM Instruments;
 
--- Instruments performed by an artist (has error)
+-- Instruments performed by an artist
 SELECT
     *
 FROM
-    Artist as A JOIN Solo_perform as SP ON A.id = SP.A_id
-                JOIN Instruments_performed as IP ON IP.S_id = SP.S_id
-                JOIN Instruments as I ON I.id = IP.I_id
+    Artist as A JOIN Solo_perform as SP ON A.id = SP.atrist_id
+                JOIN Performing IP ON IP.atrist_id = SP.atrist_id
+                JOIN Instruments as I ON I.id = IP.instruments_id
 WHERE
     A.name = "";
 
 
--- Instruments performed by a musical group (has error)
+-- Instruments performed by a musical group
 SELECT
     *
 FROM
-    Artist as A JOIN Musical_group as MG ON A.id = MG.G_id
-                JOIN Group_member as GM  ON MG.G_id = GM.G_id
-                JOIN Solo_perform as SP ON SP.A_id = A.id
-                JOIN Performing as IP ON IP.S_id = SP.S_id
-                JOIN Instruments as I ON I.id = IP.I_id
+    Artist as A JOIN Musical_group as MG ON A.id = MG.id
+                JOIN Group_member as GM  ON MG.id = GM.group_id
+                JOIN Solo_perform as SP ON SP.atrist_id = A.id
+                JOIN Performing as IP ON IP.atrist_id = SP.atrist_id
+                JOIN Instruments as I ON I.id = IP.instruments_id
 WHERE
     A.name = "";
 
@@ -290,11 +290,11 @@ WHERE
 SELECT
     *
 FROM
-    Artist as A JOIN Album as A ON A.id = A.id
-                JOIN label_record as LR ON LR.id = A.label_record_id
-                JOIN Solo_perform as SP ON SP.A_id = A.id
-                JOIN Performing as IP ON IP.S_id = SP.S_id
-                JOIN Instruments as I ON I.id = IP.I_id
+    Artist as A JOIN Album as Al ON A.id = Al.id
+                JOIN label_record as LR ON LR.id = Al.label_record_id
+                JOIN Solo_perform as SP ON SP.atrist_id = A.id
+                JOIN Performing as IP ON IP.atrist_id = SP.atrist_id
+                JOIN Instruments as I ON I.id = IP.instruments_id
 WHERE
     A.name = "";
 
@@ -305,13 +305,13 @@ WHERE
 -- Get all the markets
 SELECT * FROM Markets;
 
--- Get all all artist of a market (has error)
+-- Get all artists of a market
 SELECT
     Artist.name
 FROM
     Track JOIN markets_tracks ON Track.id = markets_tracks.track_id
           JOIN Markets       ON Markets.id = markets_tracks.markets_id
-          JOIN artist_tracks ON artist_tracks.tracks_id = Track.id
+          JOIN artist_tracks ON artist_tracks.track_id = Track.id
           JOIN Artist       ON Artist.id = artist_tracks.atrist_id;
 
 
