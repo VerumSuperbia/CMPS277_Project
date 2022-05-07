@@ -175,6 +175,8 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
         jButton31 = new javax.swing.JButton();
         jScrollPane6 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
+        jLabel117 = new javax.swing.JLabel();
+        jTextField47 = new javax.swing.JTextField();
         jPanel6 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jButton9 = new javax.swing.JButton();
@@ -1852,6 +1854,17 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
         jTable2.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
         jScrollPane6.setViewportView(jTable2);
 
+        jLabel117.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel117.setForeground(new java.awt.Color(0, 153, 153));
+        jLabel117.setText("Name:");
+
+        jTextField47.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jTextField47.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField47ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -1859,31 +1872,41 @@ public class Songs_GUI_Welcome extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton8)
+                    .addComponent(jScrollPane6)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel79)
-                            .addComponent(jLabel9))
+                            .addComponent(jLabel9)
+                            .addComponent(jButton8)
+                            .addComponent(jLabel117))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 530, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(50, 50, 50)
-                        .addComponent(jButton31, javax.swing.GroupLayout.DEFAULT_SIZE, 510, Short.MAX_VALUE))
-                    .addComponent(jScrollPane6))
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 530, Short.MAX_VALUE)
+                            .addComponent(jTextField47))
+                        .addGap(37, 37, 37)
+                        .addComponent(jButton31, javax.swing.GroupLayout.DEFAULT_SIZE, 510, Short.MAX_VALUE)
+                        .addGap(13, 13, 13)))
                 .addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLabel9)
-                        .addGap(14, 14, 14)
-                        .addComponent(jLabel79))
-                    .addComponent(jButton31, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 446, Short.MAX_VALUE)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(jLabel9)
+                                .addGap(14, 14, 14)
+                                .addComponent(jLabel79))
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel117)
+                            .addComponent(jTextField47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jButton31, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, Short.MAX_VALUE)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton8)
                 .addContainerGap())
@@ -3748,6 +3771,7 @@ private static String disT;
 private static String upT;
 private static String upID;
 public static Connection con;
+public static String nameD;
 public static void Connect(){
     try {
             // TODO add your handling code here:
@@ -4633,9 +4657,9 @@ private static ResultSet Execute(String q){
           try {
                     String query1 = "select * from " + delT.toLowerCase() +  " where " + a + " = \"" + a1 + "\";";
                     ResultSet rs1 = Execute(query1);
-                    if(!rs1.next()){
+                    /*if(!rs1.next()){
                         jLabel78.setText("Wrong name/title");
-                    }
+                    }*/
                     ResultSetMetaData rsmd = rs1.getMetaData();
                     int cols = rsmd.getColumnCount();
                     String[] colName = new String[cols];
@@ -4700,6 +4724,7 @@ private static ResultSet Execute(String q){
         // TODO add your handling code here:
         DefaultTableModel model = (DefaultTableModel) jTable2.getModel();
         model.setRowCount(0);
+        nameD = jTextField47.getText();
         String query = "";
         if(disT.equals("Get all tracks")){
             query = "SELECT * FROM Track;";
@@ -4710,10 +4735,10 @@ private static ResultSet Execute(String q){
 "    Track JOIN artist_tracks ON Track.id = artist_tracks.track_id\n" +
 "          JOIN Artist        ON Artist.id = artist_tracks.atrist_id\n" +
 "WHERE \n" +
-"    Artist.id = \"\" OR Artist.name = \"\" ; ";
+"    Artist.id = \"\" OR Artist.name = \"" + nameD + "\" ; ";
         }
         else if(disT.equals("Get all the tracks of an album")){
-            query = "SELECT * FROM Track JOIN Album ON Track.album_id = Album.id WHERE Album.title = \"\";";
+            query = "SELECT * FROM Track JOIN Album ON Track.album_id = Album.id WHERE Album.title = \" " + nameD + "\";";
         }
         else if(disT.equals("Get all the tracks of a genre")){
             query = "SELECT \n" +
@@ -4722,7 +4747,7 @@ private static ResultSet Execute(String q){
 "    Track JOIN genre_track ON Track.id = genre_track.track_id\n" +
 "          JOIN genre       ON genre.id = genre_track.genre_id\n" +
 "WHERE\n" +
-"    Genre.name = \"\";";
+"    Genre.name = \"" + nameD + "\";";
         }
         else if(disT.equals("Get all the tracks of a label record")){
             query = "SELECT \n" +
@@ -4730,7 +4755,7 @@ private static ResultSet Execute(String q){
 "FROM \n" +
 "    Track JOIN Album ON Track.album_id = Album.id\n" +
 "WHERE \n" +
-"    label_record_id = \"\";";
+"    label_record_id = \"" + nameD + "\";";
         }
         else if(disT.equals("Get all the tracks of a market")){
             query = "SELECT \n" +
@@ -4739,7 +4764,7 @@ private static ResultSet Execute(String q){
 "    Track JOIN markets_tracks ON Track.id = markets_tracks.track_id\n" +
 "          JOIN Markets        ON Markets.id = markets_tracks.markets_id\n" +
 "WHERE\n" +
-"    Markets.code_name = \"\";";
+"    Markets.code_name = \"" + nameD + "\";";
         }
         else if(disT.equals("Get all albums")){
             query = "SELECT * FROM Album;";
@@ -4757,7 +4782,7 @@ private static ResultSet Execute(String q){
 "FROM \n" +
 "    Album JOIN label_record ON label_record.id = Album.label_record_id  \n" +
 "WHERE \n" +
-"    label_record.name = \"\";";
+"    label_record.name = \"" + nameD + "\";";
         }
         else if(disT.equals("Get all the albums of a genre")){
             query = "SELECT \n" +
@@ -4766,7 +4791,7 @@ private static ResultSet Execute(String q){
 "    Album JOIN genre_track ON Album.id = genre_track.album_id\n" +
 "          JOIN genre       ON genre.id = genre_track.genre_id\n" +
 "WHERE\n" +
-"    genre.name = \"\";";
+"    genre.name = \"" + nameD + "\";";
         }else if(disT.equals("Get all the albums of a market")){
             query = "SELECT \n" +
 "    *\n" +
@@ -4774,7 +4799,7 @@ private static ResultSet Execute(String q){
 "    Album JOIN markets_album ON Album.id = markets_album.album_id\n" +
 "          JOIN Markets       ON Markets.id = markets_album.markets_id\n" +
 "WHERE\n" +
-"    Markets.code_name = \"\";";
+"    Markets.code_name = \"" + nameD + "\";";
         }
         else if(disT.equals("Get all the artists")){
             query = "SELECT * FROM Artist;";
@@ -4796,10 +4821,10 @@ private static ResultSet Execute(String q){
 "          JOIN Artist       ON Artist.id = artist_tracks.atrist_id;";
         }
         else if(disT.equals("Get artist by name")){
-            query = "SELECT * FROM Artist WHERE name = \"\";";
+            query = "SELECT * FROM Artist WHERE name = \"" + nameD + "\";";
         }
         else if(disT.equals("Get artist by id")){
-            query = "SELECT * FROM Artist WHERE id = \"\";";
+            query = "SELECT * FROM Artist WHERE id = \"" + nameD + "\";";
         }
         else if(disT.equals("Get artist of a song")){
             query = "SELECT\n" +
@@ -4808,7 +4833,7 @@ private static ResultSet Execute(String q){
 "    Track JOIN artist_tracks ON Track.id = artist_tracks.track_id\n" +
 "          JOIN Artist        ON Artist.id = artist_tracks.atrist_id\n" +
 "WHERE\n" +
-"    Track.title = \"\";";
+"    Track.title = \"" + nameD + "\";";
         }
         else if(disT.equals("Get artist of an album")){
             query = "SELECT\n" +
@@ -4817,7 +4842,7 @@ private static ResultSet Execute(String q){
 "    Album JOIN artist_album ON Album.id = artist_album.album_id\n" +
 "          JOIN Artist        ON Artist.id = artist_album.atrist_id\n" +
 "WHERE\n" +
-"    Album.title = \"\";";
+"    Album.title = \"" + nameD + "\";";
         }
         else if(disT.equals("Get all the artists of a label record")){
             query = "SELECT\n" +
@@ -4882,7 +4907,7 @@ private static ResultSet Execute(String q){
 "    Artist as A JOIN Musical_group as MG ON A.id = MG.id\n" +
 "                JOIN Group_member as GM  ON MG.id = GM.group_id\n" +
 "WHERE\n" +
-"    A.name = \"\";";
+"    A.name = \"" + nameD + "\";";
         }
         else if(disT.equals("Get all the musical groups of an artist")){
             query = "SELECT\n" +
@@ -4891,7 +4916,7 @@ private static ResultSet Execute(String q){
 "    Artist as A JOIN Musical_group as MG ON A.id = MG.id\n" +
 "                JOIN Group_member as GM  ON MG.id = GM.group_id\n" +
 "WHERE\n" +
-"    A.name = \"\";";
+"    A.name = \"" + nameD + "\";";
         }
         else if(disT.equals("Get all the musical groups of a label record")){
             query = "SELECT\n" +
@@ -4900,14 +4925,14 @@ private static ResultSet Execute(String q){
 "    Artist as A JOIN Musical_group as MG ON A.id = MG.id\n" +
 "                JOIN Group_member as GM  ON MG.id = GM.group_id\n" +
 "WHERE\n" +
-"    A.name = \"\";";
+"    A.name = \"" + nameD + "\";";
         }
         else if(disT.equals("Solo-performer")){
             query = "SELECT \n" +
 "    *\n" +
 "FROM\n" +
 "    Artist as A JOIN Solo_perform as SP ON A.id = SP.atrist_id\n" +
-"WHERE  A.name = \"\";";
+"WHERE  A.name = \"" + nameD + "\";";
         }
         else if(disT.equals("Instruments")){
             query = "SELECT * FROM Instruments;";
@@ -4920,7 +4945,7 @@ private static ResultSet Execute(String q){
 "                JOIN Performing IP ON IP.atrist_id = SP.atrist_id\n" +
 "                JOIN Instruments as I ON I.id = IP.instruments_id\n" +
 "WHERE\n" +
-"    A.name = \"\";";
+"    A.name = \"" + nameD + "\";";
         }
         else if(disT.equals("Instruments performed by a musical group")){
             query = "SELECT\n" +
@@ -4932,7 +4957,7 @@ private static ResultSet Execute(String q){
 "                JOIN Performing as IP ON IP.atrist_id = SP.atrist_id\n" +
 "                JOIN Instruments as I ON I.id = IP.instruments_id\n" +
 "WHERE\n" +
-"    A.name = \"\";";
+"    A.name = \"" + nameD + "\";";
         }
         else if(disT.equals("Instruments performed by a label record")){
             query = "SELECT\n" +
@@ -4944,7 +4969,7 @@ private static ResultSet Execute(String q){
 "                JOIN Performing as IP ON IP.atrist_id = SP.atrist_id\n" +
 "                JOIN Instruments as I ON I.id = IP.instruments_id\n" +
 "WHERE\n" +
-"    A.name = \"\";";
+"    A.name = \"" + nameD + "\";";
         }
         else if(disT.equals("Get all the markets")){
             query = "SELECT * FROM Markets;";
@@ -4978,6 +5003,7 @@ private static ResultSet Execute(String q){
                 } catch (SQLException ex) {
                     Logger.getLogger(Songs_GUI_Welcome.class.getName()).log(Level.SEVERE, null, ex);
                 }
+        
         
     }//GEN-LAST:event_jButton31ActionPerformed
 
@@ -5498,9 +5524,9 @@ private static ResultSet Execute(String q){
           try {
                     String query1 = "select * from " + delT.toLowerCase() +  " where " + a + " = \"" + a1 + "\";";
                     ResultSet rs1 = Execute(query1);
-                    if(!rs1.next()){
+                    /*if(!rs1.next()){
                         jLabel105.setText("Wrong Name/Title");
-                    }
+                    }*/
                     ResultSetMetaData rsmd = rs1.getMetaData();
                     int cols = rsmd.getColumnCount();
                     String[] colName = new String[cols];
@@ -5594,6 +5620,10 @@ private static ResultSet Execute(String q){
         card.show(mainPanel, "card4");
         jTextField63.setText("");
     }//GEN-LAST:event_jButton54ActionPerformed
+
+    private void jTextField47ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField47ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField47ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -5704,6 +5734,7 @@ private static ResultSet Execute(String q){
     private javax.swing.JLabel jLabel114;
     private javax.swing.JLabel jLabel115;
     private javax.swing.JLabel jLabel116;
+    private javax.swing.JLabel jLabel117;
     private javax.swing.JLabel jLabel118;
     private javax.swing.JLabel jLabel119;
     private javax.swing.JLabel jLabel12;
@@ -5907,6 +5938,7 @@ private static ResultSet Execute(String q){
     private javax.swing.JTextField jTextField44;
     private javax.swing.JTextField jTextField45;
     private javax.swing.JTextField jTextField46;
+    private javax.swing.JTextField jTextField47;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField51;
     private javax.swing.JTextField jTextField52;
